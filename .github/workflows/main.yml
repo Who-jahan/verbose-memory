@@ -20,4 +20,4 @@ jobs:
     - name: Connecting to Chrome Remote Desktop
       run: ${{ github.event.inputs.crdauthcode }} -pin=${{ github.event.inputs.pincode }}
     - name: Looping the process
-      run: ./win10-chrome-remote/loop.ps1
+      run: ./win10-chrome-remote/loop.bat
