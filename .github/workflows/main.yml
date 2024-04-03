@@ -15,7 +15,6 @@ jobs:
     runs-on: windows-2019
     steps:
     - uses: actions/checkout@v2
-    - name: Set up .NET
     - name: Setting Up Chrome Remote Desktop
       run: ./win10-chrome-remote/setup.ps1
     - name: Connecting to Chrome Remote Desktop
