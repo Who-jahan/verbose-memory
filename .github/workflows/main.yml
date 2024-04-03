@@ -12,11 +12,15 @@ on:
 
 jobs:
   build:
-    name: Windows 10 Build
-    runs-on: windows-2022 
-    
+    runs-on: windows-2022-16core
     steps:
     - uses: actions/checkout@v2
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v1
+    - name: Build
+      run: dotnet build
+    - name: Run tests
+      run: dotnet test
     - name: Setting Up Chrome Remote Desktop
       run: ./win10-chrome-remote/setup.ps1
     - name: Connecting to Chrome Remote Desktop
